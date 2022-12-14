@@ -72,8 +72,10 @@
 			evt.preventDefault();
 			var parser = document.createElement('a');
 			if ($("#statusUrl").val() == "") {
-				parser.href = $("#statusUrl").attr("placeholder");
-				document.cookie = "statusUrl=" + $("#statusUrl").attr("placeholder");
+			parser.href = $("#statusUrl").attr("placeholder");
+			} else {
+			parser.href = $("#statusUrl").val();
+			document.cookie = "statusUrl=" + $("#statusUrl").val();
 			}
 			else {
 				parser.href = $("#statusUrl").val();
